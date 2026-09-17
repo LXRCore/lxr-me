@@ -1,4 +1,6 @@
-# 🐺 lxr-me — roleplay text overlay for LXRCore
+<img src="https://raw.githubusercontent.com/LXRCore/.github/main/profile/lxrcore-logo.png" alt="LXRCore" width="72" align="left" style="margin-right:12px">
+
+# lxr-me — roleplay text overlay for LXRCore
 
 `/me` (from lxr-core), plus `/do`, `/try` and `/whisper`, drawn above the
 speaker's head through a NUI overlay with a bundled Georgian-capable font
@@ -14,8 +16,7 @@ this shows the words.
 lxr-core detects this resource and disables its own native `/me` rendering
 (`Config.Commands.meRenderer = 'auto'`).
 
-Converted from the FiveM `lx-me` (state-bag driven) to LXRCore's event vocabulary:
-the core emits `lxr:client:me(senderServerId, message)`; this resource's server
+The core emits `lxr:client:me(senderServerId, message)`; this resource's server
 emits `lxr:me:<kind>(source, text)` for logging resources.
 
 **Status:** syntax-checked; NUI verified in a browser; NOT TESTED in-game.
