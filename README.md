@@ -7,6 +7,9 @@ speaker's head through a NUI overlay with a bundled Georgian-capable font
 (the LXR UI Kit's Inter + Noto Sans Georgian). RDR3's native 3D text shows boxes for Georgian;
 this shows the words.
 
+![/me, /do, /try and /whisper over the heads](docs/img/overlay.png)
+
+
 * One frame-loop that only runs while a line is on screen (0.00 ms idle).
 * Lines stack per player, scale with distance, fade in/out, hide in the pause menu.
 * Per-kind colours / borders / italics in `Config.Style.kinds`.
