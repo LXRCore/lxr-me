@@ -1,0 +1,26 @@
+/* 🐺 LXR-ME | © 2026 iBoss21 / LXRCore */
+@font-face {
+  font-family: 'Noto Sans Georgian';
+  src: url('fonts/NotoSansGeorgian-Medium.ttf') format('truetype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+:root {
+  --bg: #100e0c; --surface: #1a1512; --card: #221c17; --text: #ebe3d4; --accent: #c4a574; --danger: #a83a3a;
+  --font: 'Noto Sans Georgian', 'Segoe UI', 'Sylfaen', 'DejaVu Sans', Tahoma, Arial, sans-serif;
+  --size: 15px; --radius: 4px; --fade: 400ms; --gap: 22px;
+}
+html, body { margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden; background: transparent; pointer-events: none; }
+#layer { position: absolute; inset: 0; }
+.me {
+  position: absolute; transform: translate(-50%, -50%);
+  font-family: var(--font); font-size: var(--size); font-weight: 500; line-height: 1.25;
+  color: var(--c, var(--text)); background: var(--b, rgba(16, 14, 12, 0.62));
+  border-left: 3px solid var(--border, var(--accent));
+  border-radius: var(--radius); padding: 0.25em 0.7em; white-space: nowrap; max-width: 46vw; text-overflow: ellipsis; overflow: hidden;
+  opacity: 0; animation: fadein var(--fade) ease-out forwards; will-change: left, top, transform, opacity;
+}
+.me.italic { font-style: italic; }
+.me.shadow { text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85); }
+.me.dying { animation: fadeout var(--fade) ease-in forwards; }
+@keyframes fadein { to { opacity: 1; } }
+@keyframes fadeout { from { opacity: 1; } to { opacity: 0; } }
