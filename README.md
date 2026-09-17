@@ -4,7 +4,7 @@
 
 `/me` (from lxr-core), plus `/do`, `/try` and `/whisper`, drawn above the
 speaker's head through a NUI overlay with a bundled Georgian-capable font
-(Noto Sans Georgian, OFL). RDR3's native 3D text shows boxes for Georgian;
+(the LXR UI Kit's Inter + Noto Sans Georgian). RDR3's native 3D text shows boxes for Georgian;
 this shows the words.
 
 * One frame-loop that only runs while a line is on screen (0.00 ms idle).
@@ -22,4 +22,4 @@ emits `lxr:me:<kind>(source, text)` for logging resources.
 **Status:** syntax-checked; NUI verified in a browser; NOT TESTED in-game.
 
 © 2026 iBoss21 / LXRCore | lxrcore.com | All Rights Reserved — see LICENSE.
-Font: Noto Sans Georgian © The Noto Project Authors, SIL OFL 1.1 (html/fonts/OFL.txt).
+Fonts: LXR UI Kit (Inter, Noto Sans Georgian — SIL OFL 1.1, html/fonts/OFL.txt).

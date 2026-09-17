@@ -46,7 +46,7 @@ files {
     'html/index.html',
     'html/style.css',
     'html/app.js',
-    'html/fonts/NotoSansGeorgian-Medium.ttf',
+    'html/fonts/*.woff2',
 }
 
 dependency 'lxr-core'

@@ -50,18 +50,19 @@ Config.Display = {
     hideWhenPaused = true,
 }
 
--- Visual style per kind. Colours are LXR tokens; the bundled font is Noto Sans
--- Georgian (OFL) with the system stack as fallback.
+-- Visual style per kind — LXR UI Kit tokens only (inks + the single blood accent;
+-- green/amber are status semantics). Fonts are the kit's: Inter for Latin,
+-- Noto Sans Georgian for Mkhedruli. No other hue is allowed.
 Config.Style = {
-    font       = "'Noto Sans Georgian', 'Segoe UI', 'Sylfaen', 'DejaVu Sans', Tahoma, Arial, sans-serif",
-    fontSizePx = 15,
-    radiusPx   = 4,
+    font       = "'LXR Plain', 'LXR Ka', Inter, 'Segoe UI', 'Sylfaen', sans-serif",
+    fontSizePx = 14,
+    radiusPx   = 0,
     shadow     = true,
     kinds = {
-        me      = { prefix = '',   color = '#ebe3d4', background = 'rgba(16, 14, 12, 0.62)', italic = true,  border = '#c4a574' },
-        ["do"]  = { prefix = '',   color = '#c4a574', background = 'rgba(16, 14, 12, 0.62)', italic = false, border = '#8fb37a' },
-        try     = { prefix = '',   color = '#ebe3d4', background = 'rgba(16, 14, 12, 0.62)', italic = true,  border = '#6f9dc9' },
-        whisper = { prefix = '',   color = '#b9b3a6', background = 'rgba(16, 14, 12, 0.5)',  italic = true,  border = '#5a5a5a' },
+        me      = { prefix = '',   color = '#f4f2ee', background = 'rgba(14, 14, 17, 0.92)', italic = true,  border = '#c21c37' },
+        ["do"]  = { prefix = '',   color = '#9b9aa0', background = 'rgba(14, 14, 17, 0.92)', italic = false, border = '#58575e' },
+        try     = { prefix = '',   color = '#f4f2ee', background = 'rgba(14, 14, 17, 0.92)', italic = true,  border = '#3f9a6b' },
+        whisper = { prefix = '',   color = '#9b9aa0', background = 'rgba(14, 14, 17, 0.80)', italic = true,  border = '#1e1e23' },
     },
 }
 
