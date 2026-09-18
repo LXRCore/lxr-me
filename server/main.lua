@@ -30,7 +30,7 @@ local function broadcast(src, kind, text, range, durationMs)
         if ped ~= 0 and #(GetEntityCoords(ped) - coords) <= range then
             TriggerClientEvent('lxr-me:client:show', id, src, kind, text, durationMs)
             if Config.ChatEcho then
-                TriggerClientEvent('chat:addMessage', id, { color = { 196, 165, 116 }, args = { ('/%s'):format(kind), text } })
+                TriggerClientEvent('chat:addMessage', id, { color = { 194, 28, 55 }, args = { ('/%s'):format(kind), text } })
             end
         end
     end
@@ -64,3 +64,12 @@ for kind, def in pairs(Config.Commands) do
 end
 
 AddEventHandler('playerDropped', function() buckets[source] = nil end)
+
+-- other resources speak through the same overlay (doors knock, lawmen search…)
+exports('Say', function(src, kind, text, range, durationMs)
+    local def = Config.Commands[kind or 'me'] or Config.Commands.me or {}
+    text = clean(tostring(text or ''))
+    if text == '' then return false end
+    broadcast(src, kind or 'me', text, range or def.range or 12.0, durationMs or def.durationMs)
+    return true
+end)
