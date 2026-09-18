@@ -20,11 +20,8 @@
   function make(it) {
     const el = document.createElement('div');
     const k = kinds[it.kind] || kinds.me || {};
-    el.className = 'me' + (k.italic ? ' italic' : '') + (shadow ? ' shadow' : '');
+    el.className = 'me kind-' + String(it.kind || 'me').replace(/[^a-z]/g, '') + (k.italic ? ' italic' : '');
     el.textContent = (k.prefix || '') + it.text;
-    if (k.color) el.style.setProperty('--c', k.color);
-    if (k.background) el.style.setProperty('--b', k.background);
-    if (k.border) el.style.setProperty('--border', k.border);
     layer.appendChild(el);
     return el;
   }

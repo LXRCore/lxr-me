@@ -1,25 +1,20 @@
-/* LXR-ME | LXR UI Kit tokens | © 2026 iBoss21 / LXRCore */
-@font-face { font-family: 'LXR Plain'; src: url('fonts/Inter.woff2') format('woff2-variations'); font-weight: 100 900; font-display: block; }
-@font-face { font-family: 'LXR Ka'; src: url('fonts/NotoSansGeorgian.woff2') format('woff2-variations'); font-weight: 100 900; font-display: block; }
-:root {
-  --lxr-void: #050506; --lxr-pit: #0e0e11; --lxr-edge: #1e1e23; --lxr-ash: #9b9aa0; --lxr-bone: #f4f2ee; --lxr-blood-lit: #c21c37;
-  --font: 'LXR Plain', 'LXR Ka', Inter, 'Segoe UI', 'Sylfaen', sans-serif;
-  --size: 14px; --radius: 0; --fade: 320ms; --gap: 22px;
-}
+/* LXR-ME — overlay bubbles on top of lxr-ui.css. No colours here: kinds map to kit tokens. */
 html, body { margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden; background: transparent; pointer-events: none; }
 #layer { position: absolute; inset: 0; }
 .me {
   position: absolute; transform: translate(-50%, -50%);
-  font-family: var(--font); font-size: var(--size); font-weight: 500; line-height: 1.3; letter-spacing: 0.01em;
-  color: var(--c, var(--lxr-bone)); background: var(--b, rgba(14, 14, 17, 0.92));
-  border: 1px solid var(--lxr-edge); border-left: 2px solid var(--border, var(--lxr-blood-lit));
-  border-radius: var(--radius); padding: 6px 12px; white-space: nowrap; max-width: 46vw; text-overflow: ellipsis; overflow: hidden;
-  opacity: 0; animation: fadein var(--fade) cubic-bezier(0.16, 1, 0.3, 1) forwards; will-change: left, top, transform, opacity;
+  font-family: var(--lxr-font-plain); font-size: 14px; font-weight: 500; line-height: 1.3; letter-spacing: 0.01em;
+  color: var(--lxr-bone); background: var(--lxr-panel-solid);
+  border: var(--lxr-hairline) solid var(--lxr-edge); border-left: 2px solid var(--lxr-blood-lit);
+  border-radius: var(--lxr-radius); padding: 6px 12px; white-space: nowrap; max-width: 46vw; text-overflow: ellipsis; overflow: hidden;
+  opacity: 0; animation: fadein var(--lxr-mid) var(--lxr-ease) forwards; will-change: left, top, transform, opacity;
 }
-.me:lang(ka) { font-family: 'LXR Ka', var(--font); }
+.me:lang(ka), .lxr.lang-ka .me { font-family: var(--lxr-font-ka); }
 .me.italic { font-style: italic; }
-.me.shadow { text-shadow: 0 1px 2px rgba(5, 5, 6, 0.85); }
-.me.dying { animation: fadeout var(--fade) cubic-bezier(0.7, 0, 0.16, 1) forwards; }
+.me.kind-do { color: var(--lxr-ash); border-left-color: var(--lxr-smoke); }
+.me.kind-try { border-left-color: var(--lxr-ok); }
+.me.kind-whisper { color: var(--lxr-ash); border-left-color: var(--lxr-edge); }
+.me.dying { animation: fadeout var(--lxr-mid) var(--lxr-ease) forwards; }
 @keyframes fadein { from { opacity: 0; transform: translate(-50%, -40%); } to { opacity: 1; transform: translate(-50%, -50%); } }
 @keyframes fadeout { from { opacity: 1; } to { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .me { animation: none; opacity: 1; } }

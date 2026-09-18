@@ -59,10 +59,10 @@ Config.Style = {
     radiusPx   = 0,
     shadow     = true,
     kinds = {
-        me      = { prefix = '',   color = '#f4f2ee', background = 'rgba(14, 14, 17, 0.92)', italic = true,  border = '#c21c37' },
-        ["do"]  = { prefix = '',   color = '#9b9aa0', background = 'rgba(14, 14, 17, 0.92)', italic = false, border = '#58575e' },
-        try     = { prefix = '',   color = '#f4f2ee', background = 'rgba(14, 14, 17, 0.92)', italic = true,  border = '#3f9a6b' },
-        whisper = { prefix = '',   color = '#9b9aa0', background = 'rgba(14, 14, 17, 0.80)', italic = true,  border = '#1e1e23' },
+        me      = { prefix = '',   italic = true },
+        ["do"]  = { prefix = '',   italic = false },
+        try     = { prefix = '',   italic = true },
+        whisper = { prefix = '',   italic = true },
     },
 }
 
