@@ -20,7 +20,7 @@
     © 2026 iBoss21 / LXRCore | lxrcore.com | All Rights Reserved
 ]]
 
-fx_version '3.0.0'
+fx_version 'cerulean'
 game 'rdr3'
 rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aware my resources *will* become incompatible once RedM ships.'
 lua54 'yes'
@@ -28,7 +28,7 @@ lua54 'yes'
 name 'lxr-me'
 author 'iBoss21 / LXRCore'
 description 'LXRCore v3 roleplay text overlay: /me /do /try /whisper rendered as NUI 3D text with a Georgian-capable font'
-version '1.0.0'
+version '3.0.0'
 repository 'https://github.com/LXRCore/lxr-me'
 
 shared_scripts {
